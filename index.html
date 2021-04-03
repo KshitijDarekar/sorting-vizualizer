@@ -16,22 +16,22 @@
 <!-- Navbar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <button type="button" class="navbar-brand" onclick="generate()" >New Array</button>
-          <button type="button" class="btn btn-dark bubble sort" onclick="BubbleSort()">Bubble sort</button>
-          <button type="button" class="btn btn-dark bubble sort" onclick="SelectionSort()">Selection sort</button>
-          <button type="button" class="btn btn-dark bubble sort" onclick="quickSort(0,19)" >Quick sort</button>
-          <button type="button" class="btn btn-dark bubble sort" >Insertion sort</button>
+          <button type="button" id="Button1"class="navbar-brand" onclick="generate()" >New Array</button>
+          <button type="button" id="Button2" class="btn btn-dark bubble sort" onclick="BubbleSort(),disable()">Bubble sort</button>
+          <button type="button" id="Button3"class="btn btn-dark bubble sort" onclick="SelectionSort(),disable()">Selection sort</button>
+          <button type="button" id="Button4"class="btn btn-dark bubble sort" onclick="quickSort(0,19),disable()" >Quick sort</button>
+          <button type="button" id="Button5"class="btn btn-dark bubble sort" onclick="InsertionSort(),disable()" >Insertion sort</button>
 
         </div>
       </nav>
       <section class="data-container"></section> 
 
      
-   <!-- linking index.js -->
-<script src="index.js"></script>
-<!-- linking bubbleSort.js -->
-<!-- <script src="bubbleSort.js"></script>     -->
-<!-- linking bubbleSort.js -->
-<script src="quickSort.js"></script>    
+   <!-- linking js -->
+<script   src="index.js"></script>
+<script   src="bubble.js"></script>
+<script   src="selection.js"></script>
+<script   src="insertion.js"></script>
+    
 </body>
 </html>
