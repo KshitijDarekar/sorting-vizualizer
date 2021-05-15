@@ -1,12 +1,22 @@
 const container = document.querySelector(".data-container"); 
 
 
+// var num =arr_size.value;
+
+// arr_size.addEventListener("input",generatebars);
+
 // function to generate bars 
-function generatebars(num = 20) {     
+function generatebars(num=5 ) {
+  
+  //Remove Previous Childnodes (bars) if any
+
+  while(container.hasChildNodes()){
+    container.removeChild(container.firstChild);
+  }     
   //for loop to generate 20 bars 
   for (let i = 0; i < num; i += 1) {  
     // To generate random values from 1 to 100 
-    const value = Math.floor(Math.random() * 100) + 1;  
+    const value = Math.floor(Math.random() * 100) + 6;  
     // To create element "div" 
     const bar = document.createElement("div"); 
     // To add class "bar" to "div" 
@@ -55,7 +65,7 @@ generatebars();
 // function to generate new random array  
  function generate() 
 { 
-  window.location.reload(); 
+  generatebars();
  } 
   
 
@@ -64,23 +74,23 @@ function disable()
 { 
   // To disable the button "Generate New Array" 
   document.getElementById("Button1").disabled = true; 
-  document.getElementById("Button1").style.backgroundColor = "#d8b6ff"; 
+  document.getElementById("Button1").style.backgroundColor = "#b2bec3"; 
   
   // To disable the button "Bubble Sort" 
   document.getElementById("Button2").disabled = true; 
-  document.getElementById("Button2").style.backgroundColor = "#d8b6ff";
+  document.getElementById("Button2").style.backgroundColor = "#b2bec3";
   
   // To disable the button "Selection Sort" 
   document.getElementById("Button3").disabled = true; 
-  document.getElementById("Button3").style.backgroundColor = "#d8b6ff";
+  document.getElementById("Button3").style.backgroundColor = "#b2bec3";
 
   // To disable the button "Quick Sort" 
   document.getElementById("Button4").disabled = true; 
-  document.getElementById("Button4").style.backgroundColor = "#d8b6ff";
+  document.getElementById("Button4").style.backgroundColor = "#b2bec3";
 
   // To disable the button "Insertion Sort" 
   document.getElementById("Button5").disabled = true; 
-  document.getElementById("Button5").style.backgroundColor = "#d8b6ff";   
+  document.getElementById("Button5").style.backgroundColor = "#b2bec3";   
 }
 
 //  function to enable the button 
@@ -88,21 +98,23 @@ function enable()
 { 
   // To enable the button "Generate New Array" 
   document.getElementById("Button1").disabled = false; 
-  document.getElementById("Button1").style.backgroundColor = "#6f459e"; 
+  document.getElementById("Button1").style.backgroundColor = "#f8f9fa!important"; 
   
   // To enable the button "Bubble Sort" 
   document.getElementById("Button2").disabled = false; 
-  document.getElementById("Button2").style.backgroundColor = "#6f459e";
+  document.getElementById("Button2").style.backgroundColor = "#212529";
   
   // To enable the button "Selection Sort" 
   document.getElementById("Button3").disabled = false; 
-  document.getElementById("Button3").style.backgroundColor = "#6f459e";
+  document.getElementById("Button3").style.backgroundColor = "#212529";
 
   // To enable the button "Quick Sort" 
   document.getElementById("Button4").disabled = false; 
-  document.getElementById("Button4").style.backgroundColor = "#6f459e";
+  document.getElementById("Button4").style.backgroundColor = "#212529";
 
   // To enable the button "Insertion Sort" 
   document.getElementById("Button5").disabled = false; 
-  document.getElementById("Button5").style.backgroundColor = "#6f459e";
+  document.getElementById("Button5").style.backgroundColor = "#212529";
 }
+
+
