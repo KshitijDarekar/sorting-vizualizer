@@ -1,5 +1,6 @@
+
 async function merge(p, r) {
-  let arr = document.querySelectorAll(".bar");//. 
+  let bars = document.querySelectorAll(".bar");//.
 
   //await sleep(delay);
   var q = Math.floor( (p + r) / 2 );
@@ -8,129 +9,103 @@ async function merge(p, r) {
   var n2 = r - q;
   var L = [];
   var R = [];
+  let arr=[];
 
   for(i = 0; i < n1; i++) {
-      L.push(arr[p + i]);
+      L.push(bars[p + i]);
+     // console.log(arr[p+i].childNodes[0].innerText);
      // setColor(p + i, LEFT);
   }
   for(j = 0; j < n2; j++) {
-      R.push(arr[q + j + 1]);
+      R.push(bars[q + j + 1]);
      // setColor(q + j + 1, RIGHT);
   }
 
-  //L.push(Infinity);
- // R.push(Infinity);
+  // L.push(Infinity);
+  // R.push(Infinity);
 
   i = 0;
   j = 0;
+  
+  // Initial index of merged subarray
+  k = 0;
+ 
+  while (i < n1 && j < n2) {
+    //arr = document.querySelectorAll(".bar");
+    console.log("L[i]= "+L[i].innerText + "R[j]="+ R[j].innerText);
+      if (L[i].innerText < R[j].innerText) {
+          arr[k] = L[i];
 
-  for(var k = p; k <= r; k++) {
-      //await sleep(delay);
+          //arr.push(L[i]);
 
-      if(L[i] <= R[j]) {
-        console.log(arr[k].childNodes[0].innerText);
-        arr[k].childNodes[0].innerText= L[i];
+          //  console.log("L is "+ L);
+          // arr[k].style.height = L[i].style.height; 
+          // arr[k].childNodes[0].innerText = L[i].childNodes[0].innerText;
+          // arr = document.querySelectorAll(".bar"); 
           i++;
       }
       else {
-        arr[k].childNodes[0].innerText = R[j];
+         arr[k] = R[j];
+        // console.log("R is "+ R);
+        //arr.push(R[j]);
+
+        // arr[k].style.height = R[j].style.height; 
+        // arr[k].childNodes[0].innerText = R[j].childNodes[0].innerText;
+        // arr = document.querySelectorAll(".bar");  
           j++;
       }
-
-     // setHeight(k, arr[k]);
-      //setColor(k, SELECTED);
+      k++;
   }
 
+  while(i<n1){
+
+
+    arr[k] =L[i];
+
+    // arr[k].style.height = L[i].style.height; 
+    // arr[k].childNodes[0].innerText = L[i].childNodes[0].innerText; 
+
+    //arr.push(L[i]);
+
+    i++;
+    k++; 
+  }
+
+  while(j<n2){
+
+    arr[k] = R[j];
+
+    //console.log(k)  
+    //arr.push(R[j]);
+    // arr[k].style.height = R[j].style.height;
+    
+    // arr[k].childNodes[0].innerText = R[j].childNodes[0].innerText; 
+
+
+      j++;
+      k++;
+  }
+ 
+  for(let k=p;k<=r;k++){
+    bars[k].style.height = arr[k].style.height; 
+    bars[k].childNodes[0].innerText = arr[k].innerText;
+    bars[k].childNodes[0].innerHtml = arr[k].innerHtml;
+
+    bars[k].style.backgroundColor = "yellow"; 
+ 
+  }
   //await sleep(delay);
 
   //if(p == 0 && r == size - 1)
      // setColorRange(p, r, SORTED);
   //else
     //  setColorRange(p, r, UNSORTED);
-}
+
+  }
 
 
 
-// async function merge(start, end){
-//   let mid = (start+end)/2;
-//   let bars = document.querySelectorAll(".bar");//. 
-//   let i= start + 1;
-//   let piv = Number(bars[start].childNodes[0].innerHTML) ;            //make the first element as pivot element.
-//   for(let j =start + 1; j <= end ; j++ )  {
-//   /*rearrange the array by putting elements which are less than pivot
-//      on one side and which are greater that on other. */
-
-     
-//      // To pause the execution of code for 600 milliseconds
-//                   await new Promise((resolve) =>
-//                   setTimeout(() => {
-//                   resolve();
-//                   }, 100)
-//               );
-
-//         if ( Number(bars[j].childNodes[0].innerHTML) < piv) {
-//                //swap (bars[ i ],bars[ j ]);
-                                  
-//   // Changing the color of elements to be swapped 
-//   bars[i].style.backgroundColor = " rgb(49, 226, 13)"; //#6b5b95 
-//   bars[j].style.backgroundColor = " rgb(49, 226, 13)"; //rgb(0, 183, 255)
-
-//   // To pause the execution of code for 600 milliseconds
-//   await new Promise((resolve) =>
-//   setTimeout(() => {
-//   resolve();
-//   }, 200)
-// );
-
-//               temp1 = bars[j].style.height; 
-//               temp2 = bars[j].childNodes[0].innerText; 
-//               bars[j].style.height = bars[i].style.height; 
-//               bars[i].style.height = temp1; 
-//               bars[j].childNodes[0].innerText = bars[i].childNodes[0].innerText; 
-//               bars[i].childNodes[0].innerText = temp2;
-
-// // To pause the execution of code for 600 milliseconds
-// await new Promise((resolve) =>
-// setTimeout(() => {
-// resolve();
-// }, 200)
-// );
-
-              
-//   //  // Changing the color to the previous one 
-//    bars[i].style.backgroundColor = "rgb(0, 183, 255)"; //#6b5b95 
-//    bars[j].style.backgroundColor = "rgb(0, 183, 255)"; //rgb(0, 183, 255)            
-//           i += 1;
-//       }
-//  }
-//                   // To pause the execution of code for 600 milliseconds
-//                   await new Promise((resolve) =>
-//                   setTimeout(() => {
-//                   resolve();
-//                   }, 200)
-//               );
-
-//  //put the pivot element in its proper place.
-//   temp1 = bars[start].style.height; 
-//   temp2 = bars[start].childNodes[0].innerText; 
-//   bars[start].style.height = bars[i-1].style.height; 
-//   bars[i-1].style.height = temp1; 
-//   bars[start].childNodes[0].innerText = bars[i-1].childNodes[0].innerText; 
-//   bars[i-1].childNodes[0].innerText = temp2;
-                  
-
-//                       // To pause the execution of code for 600 milliseconds
-//                       await new Promise((resolve) =>
-//                       setTimeout(() => {
-//                       resolve();
-//                       }, 100)
-//                   );
-  
-//  return i-1;                      //return the position of the pivot
-// }
-
-
-async function mergeSort(low, high, delay = 100) {
+async function mergeSort(low, high) {
 let count =0;
  if(low<high){
       
@@ -141,6 +116,9 @@ let count =0;
      await mergeSort(low,j);
      await mergeSort(j+1,high);
      await merge(low,high);
+ }
+ if(low>=high){
+   return;
  }
 
  enable();
