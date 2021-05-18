@@ -18,7 +18,15 @@ function generatebars(num =20) {
   //for loop to generate 20 bars 
   for (let i = 0; i < num; i += 1) {
       // set width of bars
-    let max_width = 600;
+      let max_width;
+      if(window.outerWidth > 600){
+         max_width = 600;
+
+      }
+      else{
+        max_width = 300;
+
+      }
     // To generate random values from 1 to 100 
     const value = Math.floor(Math.random() * 99) + 6;  
     // To create element "div" 
