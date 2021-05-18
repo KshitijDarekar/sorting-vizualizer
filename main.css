@@ -3,7 +3,9 @@
 } 
 
 body { 
-	background-color: rgb(255, 235, 211); 
+	/* background-color: rgb(255, 235, 211);  */
+	background-color: #1e272e;
+	
 	font-family: Verdana, sans-serif; 
 } 
 
@@ -20,10 +22,12 @@ body {
 } 
 
 .data-container { 
-	width: 600px; 
+	/* max-width: 600px;  */
 	height: 384px; 
-	position: relative; 
-	margin: 0 auto; 
+	position: relative; 	
+	margin: 10px auto; 
+	/* left:100px; */
+	width: 100%;
 } 
 
 .bar { 
@@ -44,7 +48,7 @@ body {
 .btn1 { 
 	padding: 12px; 
 	font-weight: bolder; 
-	background-color: #6f459e; 
+	background-color: #b2bec3;	 
 	border-radius: 10px; 
 	color: white; 
 	font-size: 16px; 
@@ -56,7 +60,7 @@ body {
 .btn2 { 
 	padding: 12px; 
 	font-weight: bolder; 
-	background-color: #6f459e; 
+	background-color: #b2bec3; 
 	border-radius: 10px; 
 	color: white; 
 	font-size: 16px; 

@@ -13,7 +13,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./public/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./public/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./public/favicon-16x16.png">
-    <link rel="manifest" href="./public/site.webmanifest">
+    <!-- <link rel="manifest" href="./public/site.webmanifest"> -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
@@ -25,15 +25,15 @@
           <button type="button" id="Button1"class="navbar-brand" onclick="generate()" >New Array</button>
 
           <span>
-            Bars
-           <input id="arr_sz" type="range" autocomplete="off"  min=10 max=120 step=1 value=20 onchange="generatebars(this.value);">
+            Size
+           <input id="arr_sz" type="range" autocomplete="off"  min=5 max=40 step=1 value=20 onchange="generatebars(this.value);">
    </span> 
           <button type="button" id="Button2" class="btn btn-dark bubble sort"onclick="BubbleSort(),disable()">Bubble sort</button>
           <button type="button" id="Button3"class="btn btn-dark bubble sort" onclick="SelectionSort(),disable()">Selection sort</button>
           <button type="button" id="Button5"class="btn btn-dark bubble sort" onclick="InsertionSort(),disable()" >Insertion sort</button>
-          <button type="button" id="Button4"class="btn btn-dark bubble sort" onclick="quickSort(0,19),disable()" >Quick sort</button>
+          <button type="button" id="Button4"class="btn btn-dark bubble sort"  >Quick sort</button>
 
-          <button type="button" id="Button5"class="btn btn-dark bubble sort" onclick="mergeSort(0,19),disable()" >Merge sort</button>
+          <!-- <button type="button" id="Button5"class="btn btn-dark bubble sort" onclick="mergeSort(0,19),disable()" >Merge sort</button> -->
 
         </div>
       </nav>
