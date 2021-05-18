@@ -1,7 +1,4 @@
-// import {disable, enable, generate, generatebars, swap,container} from  './index.js';
-
 // Insertion Sort Algorithm Visualizer 
-
 
 // Asynchronous function to perform "Insertion Sort"
 async function InsertionSort(delay = 600) {
@@ -22,7 +19,7 @@ async function InsertionSort(delay = 600) {
         
     
         //Provide darkblue color to the ith bar
-        bars[i].style.backgroundColor = "darkblue";
+        bars[i].style.backgroundColor = "#ffd32a";
         
         // To pause the execution of code for 600 milliseconds
         await new Promise((resolve) =>
@@ -35,7 +32,7 @@ async function InsertionSort(delay = 600) {
         while (j >= 0 && parseInt(bars[j].childNodes[0].innerHTML) > key) {
             
         // Provide darkblue color to the jth bar
-        bars[j].style.backgroundColor = "darkblue";
+        bars[j].style.backgroundColor = "#ffd32a";
             
         // For placing jth element over (j+1)th element
         bars[j + 1].style.height = bars[j].style.height;
@@ -88,8 +85,3 @@ async function InsertionSort(delay = 600) {
     // .style.backgroundColor = "#6f459e";
     enable();
     }
-    
-    // InsertionSort();
-
-    // generatebars();
-    // generate();
