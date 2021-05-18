@@ -28,7 +28,14 @@ body {
 	margin: 10px auto; 
 	/* left:100px; */
 	width: 100%;
+	max-width: 630px;
+
 } 
+
+.navbar>.container-fluid {
+	display:flex;
+	justify-content: center;
+}
 
 .bar { 
 	width: 28px; 
