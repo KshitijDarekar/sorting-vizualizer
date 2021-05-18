@@ -78,8 +78,8 @@
 // };
 //take input from arr_sz to change number of bars
 
-// const button4 = document.getElementById("Button4");
-// button4.addEventListener("click", quickSort(0,num-1),disable());
+const button4 = document.getElementById("Button4");
+button4.addEventListener("click", quickSort.bind(null,0,num-1));
 
 
 
