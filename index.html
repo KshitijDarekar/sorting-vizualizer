@@ -8,30 +8,64 @@
     <!-- linking style.css -->
     <link href="main.css" rel="stylesheet" /> 
     
+    <title>Sorting Visualizer</title>
 
-    <title>Document</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./public/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./public/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./public/favicon-16x16.png">
+    <link rel="manifest" href="./public/site.webmanifest">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
-    <h1 style="background-color: #EBFAF5;">Sorting Visualizer</h1>
+    <!-- <h1 style="background-color: #f8f9fa!important;">Sorting Visualizer</h1> -->
+
 <!-- Navbar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <button type="button" id="Button1"class="navbar-brand" onclick="generate()" >New Array</button>
-          <button type="button" id="Button2" class="btn btn-dark bubble sort" onclick="BubbleSort(),disable()">Bubble sort</button>
+
+          <span>
+            Bars
+           <input id="arr_sz" type="range" autocomplete="off"  min=10 max=120 step=1 value=20 onchange="generatebars(this.value);">
+   </span> 
+          <button type="button" id="Button2" class="btn btn-dark bubble sort"onclick="BubbleSort(),disable()">Bubble sort</button>
           <button type="button" id="Button3"class="btn btn-dark bubble sort" onclick="SelectionSort(),disable()">Selection sort</button>
-          <button type="button" id="Button4"class="btn btn-dark bubble sort" onclick="quickSort(0,19),disable()" >Quick sort</button>
           <button type="button" id="Button5"class="btn btn-dark bubble sort" onclick="InsertionSort(),disable()" >Insertion sort</button>
+          <button type="button" id="Button4"class="btn btn-dark bubble sort" onclick="quickSort(0,19),disable()" >Quick sort</button>
+
+          <button type="button" id="Button5"class="btn btn-dark bubble sort" onclick="mergeSort(0,19),disable()" >Merge sort</button>
 
         </div>
       </nav>
+        <h1 style="color: chocolate;">Sorting Visualizer</h1>
+
+      <div id="typed-strings" style="color: white" >
+        <p style="color: white" >🖐Welcome to <strong style="color: rgb(255, 137, 137)">Sorting Visualizer</strong> 😃  </p>
+        <p style="color: white" >👩‍💻Learn  <em style="color: white">Sorting Algorithms </em> by 👀  visualizing it .</p>
+      </div>
+      <span id="typed" style="color: white ; font-size: 32px;align-self: centre;"></span>
       <section class="data-container"></section> 
 
      
    <!-- linking js -->
-  <script   src="./js_files/sorting.js"></script>
+  <script id ='erasable'  src="./js_files/sorting.js"></script>
   <script   src="./js_files/bubble.js"></script>
   <script   src="./js_files/selection.js"></script>
   <script   src="./js_files/insertion.js"></script>
+  <script   src="./js_files/quick.js"></script>
+  <script   src="./js_files/merge.js"></script>
+
+
+  <script>
+    var typed = new Typed('#typed', {
+      stringsElement: '#typed-strings',
+      
+  // Waits 1000ms after typing "First"
+  strings: ['First ^1000 sentence.', 'Second sentence.'],
+  typeSpeed:50
+    });
+
+  </script>
     
 </body>
 </html>

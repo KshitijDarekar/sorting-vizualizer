@@ -1,12 +1,12 @@
 const container = document.querySelector(".data-container"); 
 
+//take input from arr_sz to change number of bars
+let arr_size=document.getElementById("arr_sz")
+let num= parseInt(arr_size.value);
 
-// var num =arr_size.value;
-
-// arr_size.addEventListener("input",generatebars);
 
 // function to generate bars 
-function generatebars(num=5 ) {
+function generatebars(num =20) {
   
   //Remove Previous Childnodes (bars) if any
 
@@ -23,8 +23,10 @@ function generatebars(num=5 ) {
     bar.classList.add("bar"); 
     // Provide height to the bar 
     bar.style.height = `${value * 3}px`; 
-    // Translate the bar towards positive X axis  
-    bar.style.transform = `translateX(${i * 30}px)`; 
+    // Translate the bar towards positive X axis 
+    bar.style.width=`20px`; 
+
+    bar.style.transform = `translateX(${i * 25}px)`;
     // To create element "label" 
     const barLabel = document.createElement("label"); 
     // To add class "bar_id" to "label" 
