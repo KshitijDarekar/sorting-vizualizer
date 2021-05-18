@@ -5,6 +5,8 @@ let arr_size=document.getElementById("arr_sz")
 let num= parseInt(arr_size.value);
 
 
+
+
 // function to generate bars 
 function generatebars(num =20) {
   
@@ -14,9 +16,11 @@ function generatebars(num =20) {
     container.removeChild(container.firstChild);
   }     
   //for loop to generate 20 bars 
-  for (let i = 0; i < num; i += 1) {  
+  for (let i = 0; i < num; i += 1) {
+      // set width of bars
+    let max_width = 600;
     // To generate random values from 1 to 100 
-    const value = Math.floor(Math.random() * 100) + 6;  
+    const value = Math.floor(Math.random() * 99) + 6;  
     // To create element "div" 
     const bar = document.createElement("div"); 
     // To add class "bar" to "div" 
@@ -24,15 +28,19 @@ function generatebars(num =20) {
     // Provide height to the bar 
     bar.style.height = `${value * 3}px`; 
     // Translate the bar towards positive X axis 
-    bar.style.width=`20px`; 
-
-    bar.style.transform = `translateX(${i * 25}px)`;
+    bar.style.width=`${(max_width+5)/num}px`; 
+    let width =max_width/num  ;
+    bar.style.transform = `translateX(${i * (width+3)  }px)`;
     // To create element "label" 
     const barLabel = document.createElement("label"); 
     // To add class "bar_id" to "label" 
     barLabel.classList.add("bar_id"); 
     // Assign value to "label" 
-    barLabel.innerHTML = value; 
+    barLabel.innerHTML = value;
+    // if width of bar is too small then don't show the innerHTML value
+    if(width<26){
+      barLabel.style.display="none";
+    } 
     // Append "Label" to "div" 
     bar.appendChild(barLabel); 
     // Append "div" to "data-container div" 
@@ -67,7 +75,7 @@ generatebars();
 // function to generate new random array  
  function generate() 
 { 
-  generatebars();
+  generatebars(parseInt(arr_size.value));
  } 
   
 
