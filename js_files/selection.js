@@ -12,11 +12,11 @@ async function SelectionSort(delay = 300) {
       min_idx = i; 
     
       // Provide darkblue color to the ith bar 
-      bars[i].style.backgroundColor = "darkblue"; 
+      bars[i].style.backgroundColor = "#3c40c6"; 
       for (var j = i + 1; j < bars.length; j += 1) { 
     
         // Provide red color to the jth bar 
-        bars[j].style.backgroundColor = "red"; 
+        bars[j].style.backgroundColor = "#ff3f34"; 
           
         // To pause the execution of code for 300 milliseconds 
         await new Promise((resolve) => 
