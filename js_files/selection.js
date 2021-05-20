@@ -1,6 +1,5 @@
+//------Selection Sort Algorithm Visualizer ---------------
 
-    //------Selection Sort Algorithm Visualizer ---------------
-  
 //asynchronous function to perform "Selection Sort" 
 async function SelectionSort(delay = 300) { 
     let bars = document.querySelectorAll(".bar"); 
@@ -12,11 +11,11 @@ async function SelectionSort(delay = 300) {
       min_idx = i; 
     
       // Provide darkblue color to the ith bar 
-      bars[i].style.backgroundColor = "#3c40c6"; 
+      bars[i].style.backgroundColor = "#6c5b7b"; 
       for (var j = i + 1; j < bars.length; j += 1) { 
     
         // Provide red color to the jth bar 
-        bars[j].style.backgroundColor = "#ff3f34"; 
+        bars[j].style.backgroundColor = "#ff4242"; 
           
         // To pause the execution of code for 300 milliseconds 
         await new Promise((resolve) => 
@@ -38,7 +37,8 @@ async function SelectionSort(delay = 300) {
             // Provide skyblue color to the (min-idx)th bar 
             bars[min_idx].style.backgroundColor = "  rgb(24, 190, 255)"; 
           } 
-          min_idx = j; 
+          min_idx = j;
+          bars[min_idx].style.backgroundColor = "#f0a830"; 
         } else { 
     
           // Provide skyblue color to the jth bar 
@@ -65,9 +65,11 @@ async function SelectionSort(delay = 300) {
       bars[min_idx].style.backgroundColor = "  rgb(24, 190, 255)"; 
     
       // Provide lightgreen color to the ith bar 
-      bars[i].style.backgroundColor = " rgb(49, 226, 13)"; 
+      bars[i].style.backgroundColor = "#13CE66"; 
     } 
     // to enable buttons after sorting
     enable();
   } 
     
+
+  // ~~~ Kshitij Darekar

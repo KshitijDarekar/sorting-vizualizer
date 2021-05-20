@@ -5,7 +5,7 @@ async function InsertionSort(delay = 600) {
     let bars = document.querySelectorAll(".bar");
     
     // Provide lightgreen colour to 0th bar
-    bars[0].style.backgroundColor = " rgb(49, 226, 13)";
+    bars[0].style.backgroundColor = "#13CE66";
     for (var i = 1; i < bars.length; i += 1) {
     
         // Assign i-1 to j
@@ -32,7 +32,7 @@ async function InsertionSort(delay = 600) {
         while (j >= 0 && parseInt(bars[j].childNodes[0].innerHTML) > key) {
             
         // Provide darkblue color to the jth bar
-        bars[j].style.backgroundColor = "#ffd32a";
+        bars[j].style.backgroundColor = "#ff4242";
             
         // For placing jth element over (j+1)th element
         bars[j + 1].style.height = bars[j].style.height;
@@ -51,7 +51,7 @@ async function InsertionSort(delay = 600) {
             
         // Provide lightgreen color to the sorted part
         for(var k=i;k>=0;k--){
-            bars[k].style.backgroundColor = " rgb(49, 226, 13)";
+            bars[k].style.backgroundColor = "#13CE66";
         }
         }
     
@@ -67,21 +67,10 @@ async function InsertionSort(delay = 600) {
         );
         
         // Provide light green color to the ith bar
-        bars[i].style.backgroundColor = " rgb(49, 226, 13)";
+        bars[i].style.backgroundColor = "#13CE66";
     }
-    
-    
-        
-    // // To enable the button "Generate New Array" after final(sorted)
-    // document.getElementById("Button1")
-    // .disabled = false;
-    // document.getElementById("Button1")
-    // .style.backgroundColor = "#6f459e";
-    
-    // // To enable the button "Insertion Sort" after final(sorted)
-    // document.getElementById("Button2")
-    // .disabled = false;
-    // document.getElementById("Button2")
-    // .style.backgroundColor = "#6f459e";
     enable();
     }
+
+
+    // ~~Kshitij Darekar
