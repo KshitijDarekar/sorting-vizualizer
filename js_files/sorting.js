@@ -116,7 +116,7 @@ function enable()
 { 
   // To enable the button "Generate New Array" 
   document.getElementById("Button1").disabled = false; 
-  document.getElementById("Button1").style.backgroundColor = "#f8f9fa!important"; 
+  document.getElementById("Button1").style.backgroundColor = "#6c757d"; 
   
   // To enable the button "Bubble Sort" 
   document.getElementById("Button2").disabled = false; 
@@ -134,5 +134,3 @@ function enable()
   document.getElementById("Button5").disabled = false; 
   document.getElementById("Button5").style.backgroundColor = "#212529";
 }
-
-

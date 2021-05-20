@@ -43,7 +43,8 @@ body {
 	left: 0; 
 	bottom: 0; 
 	background-color: rgb(0, 183, 255); 
-	transition: 0.2s all ease; 
+	transition: 0.2s all ease;
+	border-radius:5px; 
 } 
 
 .bar__id { 
@@ -67,9 +68,22 @@ body {
 .btn2 { 
 	padding: 12px; 
 	font-weight: bolder; 
-	background-color: #b2bec3; 
+	background-color: #f8f9fa!important; 
 	border-radius: 10px; 
 	color: white; 
 	font-size: 16px; 
 	border: white; 
+}
+
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+
+
+#typed{
+	font-size: 18px!important;
+
+}
+
 }

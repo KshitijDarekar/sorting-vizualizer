@@ -25,18 +25,18 @@
 
           <div class="d-grid gap-2 d-md-flex justify-content-md-center" >
 
-            <button type="button" id="Button1"class="btn btn-dark bubble sort" onclick="generate()" >New Array</button>
+            <button type="button" id="Button1"class="btn btn-secondary bubble sort" style="border-color: #1a1e21" onclick="generate()" >New Array</button>
 
             <span>
               Size
-             <input id="arr_sz" type="range" autocomplete="off"  min=5 max=35 step=1 value=20 onchange="generatebars(this.value);">
+             <input id="arr_sz" type="range" autocomplete="off"  min=5 max=35 step=1 value=20 onchange="generatebars(this.value),enable();">
             </span> 
             <button type="button" id="Button2" class="btn btn-dark bubble sort"data-bs-toggle="button" autocomplete="off"  onclick="BubbleSort(),disable()">Bubble sort</button>
             <button type="button" id="Button3"class="btn btn-dark bubble sort" onclick="SelectionSort(),disable()">Selection sort</button>
             <button type="button" id="Button5"class="btn btn-dark bubble sort" onclick="InsertionSort(),disable()" >Insertion sort</button>
             <button type="button" id="Button4"class="btn btn-dark bubble sort"  >Quick sort</button>
   
-            <!-- <button type="button" id="Button5"class="btn btn-dark bubble sort" onclick="mergeSort(0,19),disable()" >Merge sort</button> -->
+            <!-- <button type="button" id="Button6"class="btn btn-dark bubble sort" onclick="mergeSort(0,19),disable()" >Merge sort</button> -->
   
           </div>
           
@@ -73,4 +73,4 @@
   </script>
     
 </body>
-</html>
+</html> 
