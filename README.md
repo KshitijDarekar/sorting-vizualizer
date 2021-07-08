@@ -1,5 +1,5 @@
 
-![Logo](https://res.cloudinary.com/horizonkd/image/upload/v1625749737/Sorting-Visualizer/favicon_uw3kmk.ico)
+![Logo](https://res.cloudinary.com/horizonkd/image/upload/v1625755899/Sorting-Visualizer/android-chrome-192x192_ajq9qd.png)
 
     
 # Sorting Visualizer
