@@ -10,7 +10,9 @@ A web app to visualize classic sorting algorithms such as insertion sort, quick 
 ## Demo
 
 Live Link : https://sortingvisualizers.netlify.app/
- 
+
+
+![Alt Text](https://res.cloudinary.com/horizonkd/image/upload/v1625757981/Sorting-Visualizer/sorting-visualizer_kuwhwq.gif)
   
 ## Screenshots
 
